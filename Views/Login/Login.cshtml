@@ -1,0 +1,26 @@
+﻿@model Lesson09_Session.Models.ModelLogin;
+@{
+    ViewData["Title"] = "Login information";
+}
+<div class="row">
+    <div class="col-md-4">
+        <h2>Login infor @ViewBag.Login</h2>
+        <form asp-action="Login" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Đăng nhập" class="btn btn-primary" />
+                <input type="reset" value="Làm lại" class="btn btn-secondary" />
+            </div>
+        </form>
+    </div>
+</div>

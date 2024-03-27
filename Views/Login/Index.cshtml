@@ -1,0 +1,13 @@
+﻿@model Lesson09_Session.Models.Customer;
+@{
+    ViewData["Title"] = "Login information";
+}
+<h1>Hello world</h1>
+<div>
+    <h1>Hiển thị thông tin đăng nhập</h1>
+    <hr/>
+    <h2>Welcome to, @Model.Username</h2>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
